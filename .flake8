@@ -1,0 +1,4 @@
+[flake8]
+ignore = F812,D101,D102,D107,H501,H405,H404,H403,H401,H306,H301,H233,H202,H101
+exclude = .git,__pycache__,logs/,api/services
+inline-quotes = "
