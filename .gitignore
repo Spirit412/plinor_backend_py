@@ -1,9 +1,6 @@
 *.pyc
-.idea
-.vscode
 .fleet
 .vs
-.devcontainer
 venv
 /venv
 api/venv
@@ -11,7 +8,6 @@ api/venv
 */__pycache__
 .vs
 /venv/*
-exampledump.sql
 .pytest_cache
 .env
 /upload-images/*
