@@ -1,0 +1,15 @@
+"remote.extensionKind": {
+    "streetsidesoftware.code-spell-checker": [ "ui" ],
+    "njpwerner.autodocstring": [ "ui" ],
+    "aaron-bond.better-comments": [ "ui" ],
+    "VisualStudioExptTeam.vscodeintellicode": [ "ui" ],
+    "ms-python.isort": [ "ui" ],
+    "esbenp.prettier-vscode": [ "ui" ],
+    "ms-python.vscode-pylance": [ "ui" ],
+    "ms-python.python": [ "ui" ],
+    "hbenl.vscode-test-explorer": [ "ui" ],
+    "ms-vscode.test-adapter-converter": [ "ui" ],
+    "Gruntfuggly.todo-tree": [ "ui" ],
+    "funkyremi.vscode-google-translate": [ "ui" ],
+    "redhat.vscode-xml": [ "ui" ],
+}

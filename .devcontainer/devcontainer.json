@@ -1,0 +1,79 @@
+{
+  "name": "devc_plinor_backend_py",
+  "image": "plinor_backend_py-api_py:latest",
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "context": ".."
+  // },
+  // "dockerComposeFile": "docker-compose.yaml",
+  // "service": "api_py",
+
+  "runArgs": [
+    "--init",
+    "--privileged"
+  ],
+  "overrideCommand": true,
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/plinor_backend_py,type=bind,consistency=delegated",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  // Use this environment variable if you need to bind mount your local source code into a new container.
+  // "remoteEnv": {
+  // 	"LOCAL_WORKSPACE_FOLDER": "/home/vscode"
+  // },
+
+  "extensions": [
+    "ms-python.python",
+    "wholroyd.jinja",
+    "formulahendry.code-runner",
+    "streetsidesoftware.code-spell-checker",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "VisualStudioExptTeam.intellicode-api-usage-examples",
+    "humao.rest-client",
+    "streetsidesoftware.code-spell-checker-russian",
+    "adpyke.vscode-sql-formatter",
+    "mtxr.sqltools",
+    "ultram4rine.sqltools-clickhouse-driver",
+    "DotJoshJohnson.xml",
+    "redhat.vscode-yaml",
+    "njpwerner.autodocstring",
+    "streetsidesoftware.code-spell-checker",
+    "njpwerner.autodocstring",
+    "aaron-bond.better-comments",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ms-python.isort",
+    "esbenp.prettier-vscode",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "hbenl.vscode-test-explorer",
+    "ms-vscode.test-adapter-converter",
+    "Gruntfuggly.todo-tree",
+    "funkyremi.vscode-google-translate",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml",
+    "/extensions/aaron-bond.better-comments-3.0.2.vsix",
+    "/extensions/donjayamanne.python-environment-manager-1.1.1.vsix",
+    "/extensions/DotJoshJohnson.xml-2.5.1.vsix",
+    "/extensions/esbenp.prettier-vscode-10.1.0.vsix",
+    "/extensions/funkyremi.vscode-google-translate-1.4.13.vsix",
+    "/extensions/hbenl.vscode-test-explorer-2.21.1.vsix",
+    "/extensions/ms-python.python-2023.15.12421005.vsix",
+    "/extensions/ms-python.vscode-pylance-2023.8.51.vsix",
+    "/extensions/ms-vscode.test-adapter-converter-0.1.8.vsix",
+    "/extensions/njpwerner.autodocstring-0.6.1.vsix",
+    "/extensions/redhat.vscode-xml-0.26.2023080404@linux-x64.vsix",
+    "/extensions/redhat.vscode-yaml-1.14.0.vsix",
+    "/extensions/VisualStudioExptTeam.vscodeintellicode-1.2.30.vsix"
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python3.11",
+    "terminal.integrated.defaultProfile.linux": "/bin/bash",
+    "terminal.integrated.cwd": "/plinor_backend_py",
+    "python.linting.enabled": true,
+    "sql-formatter.uppercase": true,
+    "python.linting.flake8Enabled": true
+  },
+  "forwardPorts": [
+    3000,
+    5000
+  ]
+}
