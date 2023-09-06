@@ -1,13 +1,11 @@
 {
   "name": "devc_plinor_backend_py",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "image": "devcontainer-api_py:latest",
-  "dockerComposeFile": [
-    "docker-compose.yaml"
-  ],
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "context": ".."
+  // },
+  // "image": "devcontainer-api_py:latest",
+  "dockerComposeFile": "docker-compose.yaml",
   "service": "api_py",
   "runArgs": [
     "--init",
