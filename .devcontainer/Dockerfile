@@ -16,6 +16,12 @@ ENV PYTHONUNBUFFERED=1
 # RUN useradd --uid ${USER_ID} --gid ${GROUP_ID} --shell /bin/sh --skel /dev/null ${PROJECT_NAME} 
 # RUN mkdir ${PROJECT_NAME}
 # RUN chown -R ${PROJECT_NAME}:${PROJECT_NAME} ${PROJECT_NAME}
+ENV TZ="Europe/Moscow"
+
+RUN apt update && \
+    apt install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/Europe/Moscow /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
 
 
 WORKDIR /${PROJECT_NAME} 
@@ -25,7 +31,7 @@ COPY . .
 RUN pip3 install --no-cache -r /${PROJECT_NAME}/requirements.txt
 RUN pip3 install --no-cache -r /${PROJECT_NAME}/requirements-dev.txt
 
-RUN apt-get update && apt install -y git && \
+RUN apt update && apt install -y git && \
     apt install iputils-ping -y && \
     apt install htop -y && \
     apt install mc -y
