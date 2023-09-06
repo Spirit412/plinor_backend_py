@@ -14,7 +14,7 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_DB: ${DB_DBNAME}
     networks:
-      - proj_network
+      proj_network:
 
   db_redis:
     container_name: db_redis
@@ -23,7 +23,7 @@ services:
     ports:
       - ${RADIS_PORT}:${RADIS_PORT}
     networks:
-      - proj_network
+      proj_network:
 
   api_py:
     container_name: api_py
@@ -38,10 +38,14 @@ services:
     # command: 'bash -c "cd ${PROJECT_NAME} uvicorn api.main:app --host 0.0.0.0 --port=${APP_PORT} --reload"'
     volumes:
       - api_py-data:${PROJECT_NAME}
+    tty: true
+    working_dir: /${PROJECT_NAME}
     env_file:
       - .env
+      - 
     networks:
-      - proj_network
+      proj_network:
+    
 
 volumes:
   - postgres-data:

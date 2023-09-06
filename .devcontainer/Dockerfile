@@ -30,5 +30,8 @@ RUN apt-get update && apt install -y git && \
     apt install htop -y && \
     apt install mc -y
 
+RUN git config --global user.email "spirit412@gmail.com" && \
+    git config --global user.name "Aleksandr Domanskiy"
+
 # USER ${REMOTE_USER}
 EXPOSE 5000
