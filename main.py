@@ -1,10 +1,9 @@
+
 import json
 import logging
-import sys
+
 import time
-import traceback
 from asyncio.log import logger
-from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
@@ -38,17 +37,11 @@ app = FastAPI(
 
 app.logger = logger_name
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 app.include_router(v1_router)
 
 app.add_middleware(GZipMiddleware, minimum_size=1000)
+
 app.add_middleware(
     CorrelationIdMiddleware,
     header_name="X-Request-ID",
@@ -56,6 +49,14 @@ app.add_middleware(
     transformer=lambda a: a,
 )
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
