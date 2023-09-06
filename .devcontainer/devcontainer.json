@@ -1,6 +1,6 @@
 {
   "name": "devc_plinor_backend_py",
-  // "image": "plinor_backend_py-api_py:latest",
+  "image": "plinor_backend_py-api_py:latest",
   // "build": {
   //   "dockerfile": "Dockerfile",
   //   "context": ".."

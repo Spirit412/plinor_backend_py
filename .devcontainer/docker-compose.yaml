@@ -37,19 +37,17 @@ services:
       - db_pg
     # command: 'bash -c "cd ${PROJECT_NAME} uvicorn api.main:app --host 0.0.0.0 --port=${APP_PORT} --reload"'
     volumes:
-      - api_py-data:${PROJECT_NAME}
+      - api_py-data:/${PROJECT_NAME}
     tty: true
     working_dir: /${PROJECT_NAME}
     env_file:
       - .env
-      - 
     networks:
       proj_network:
-    
 
 volumes:
-  - postgres-data:
-  - api_py-data:
+  postgres-data:
+  api_py-data:
 
 networks:
   proj_network:

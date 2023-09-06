@@ -2,7 +2,7 @@ version: "3.3"
 services:
   db_pg:
     container_name: db_pg
-    image: postgres:latest
+    image: postgres:16
     restart: unless-stopped
     ports:
       - ${DB_PORT}:${DB_PORT}
