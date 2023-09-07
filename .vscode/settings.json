@@ -1,15 +1,206 @@
-"remote.extensionKind": {
-    "streetsidesoftware.code-spell-checker": [ "ui" ],
-    "njpwerner.autodocstring": [ "ui" ],
-    "aaron-bond.better-comments": [ "ui" ],
-    "VisualStudioExptTeam.vscodeintellicode": [ "ui" ],
-    "ms-python.isort": [ "ui" ],
-    "esbenp.prettier-vscode": [ "ui" ],
-    "ms-python.vscode-pylance": [ "ui" ],
-    "ms-python.python": [ "ui" ],
-    "hbenl.vscode-test-explorer": [ "ui" ],
-    "ms-vscode.test-adapter-converter": [ "ui" ],
-    "Gruntfuggly.todo-tree": [ "ui" ],
-    "funkyremi.vscode-google-translate": [ "ui" ],
-    "redhat.vscode-xml": [ "ui" ],
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.format.insertSpaceAfterCommaDelimiter": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.unusualLineTerminators": "auto",
+    "terminal.integrated.allowMnemonics": true,
+    "debug.autoExpandLazyVariables": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "cSpell.language": "en,ru",
+    "files.autoSave": "afterDelay",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "cSpell.userWords": [
+        "asgi",
+        "autoflush",
+        "backref",
+        "celeryconfig",
+        "chunksize",
+        "cleanenv",
+        "condecimal",
+        "dateutil",
+        "dotenv",
+        "fastapi",
+        "ilyakaznacheev",
+        "isnot",
+        "itertuples",
+        "joinedload",
+        "jsonable",
+        "lazyload",
+        "loguru",
+        "mattn",
+        "nullslast",
+        "onupdate",
+        "Plinor",
+        "primaryjoin",
+        "pydantic",
+        "pytestmark",
+        "redoc",
+        "sqlalchemy",
+        "svgwrite",
+        "uselist",
+        "viewonly"
+    ],
+    "commentTranslate.hover.concise": true,
+    "commentTranslate.hover.string": true,
+    "commentTranslate.hover.variable": true,
+    "commentTranslate.targetLanguage": "ru",
+    "commentTranslate.selectTargetLanguageWhenReplacing": true,
+    "git.autofetch": true,
+    "audioCues.noInlayHints": "on",
+    "go.toolsManagement.autoUpdate": true,
+    "explorer.compactFolders": false,
+    "explorer.excludeGitIgnore": false,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "vsintellicode.features.python.deepLearning": "enabled",
+    "vsintellicode.java.completionsEnabled": false,
+    "vsintellicode.sql.completionsEnabled": false,
+    "vsintellicode.typescript.completionsEnabled": false,
+    "thunder-client.saveToWorkspace": true,
+    "thunder-client.indentSize": 4,
+    "thunder-client.previewFeatures": true,
+    "thunder-client.workspaceRelativePath": "../",
+    "thunder-client.customLocation": "../",
+    "notebook.consolidatedRunButton": true,
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "pythonTestExplorer.testplanArgs": [
+        "-v",
+        "-s"
+    ],
+    "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "push:command",
+        "switch:command"
+    ],
+    "liveshare.accessibility.voice": "ru-RU-Dmitry",
+    "wakatime.apiKey": "0a1f617c-d65d-457f-8225-dc493322dcfa",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Default High Contrast",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "yaml.schemas": {
+        "file:///c%3A/Users/u12/.vscode/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "0286144d-8e61-4373-97b0-2a79cbb3867d",
+            "enabled": true,
+            "name": "My all-code Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "826e83e5-798c-4720-bd22-a68cc7ce1ff4",
+            "monitor": true
+        }
+    ],
+    "redhat.telemetry.enabled": true,
+    "githubPullRequests.pullBranch": "never",
+    "testExplorer.showOnRun": true,
+    "testExplorer.addToEditorContextMenu": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+    "gitlens.codeLens.scopes": [
+        "containers",
+        "document"
+    ],
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.hovers.annotations.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "git.confirmSync": false,
+    "workbench.startupEditor": "none",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "vsicons.dontShowNewVersionMessage": true,
+    "launch": {
+        "configurations": []
+    },
+    "editor.useTabStops": false,
+    "terminal.integrated.tabStopWidth": 4,
+    "gitlens.views.repositories.branches.layout": "list",
+    "editor.hover.delay": 500,
+    "pythonTestExplorer.testFramework": "pytest",
+    "testing.alwaysRevealTestOnStateChange": true,
+    "testExplorer.onStart": "reset",
+    "testExplorer.onReload": "reset",
+    "testExplorer.mergeSuites": true,
+    "pythonTestExplorer.testplanPath": "",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.addImport.exactMatchOnly": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.downloadStubs": true,
+    "python.analysis.enableSyncServer": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "http.proxyStrictSSL": false,
+    "http.proxySupport": "fallback",
+    "sqltools.autoConnectTo": "connect plinor db",
+    "sqltools.connections": [
+        {
+            "name": "connect plinor db",
+            "server": "db_pg",
+            "driver": "PostgreSQL",
+            "port": 5432,
+            "database": "plinor",
+            "username": "plinor",
+            "askForPassword": false,
+            "password": "plinor",
+            "connectionTimeout": 15
+        }
+    ],
+    "remote.extensionKind": {
+        "streetsidesoftware.code-spell-checker": [
+            "ui"
+        ],
+        "njpwerner.autodocstring": [
+            "ui"
+        ],
+        "aaron-bond.better-comments": [
+            "ui"
+        ],
+        "VisualStudioExptTeam.vscodeintellicode": [
+            "ui"
+        ],
+        "ms-python.isort": [
+            "ui"
+        ],
+        "esbenp.prettier-vscode": [
+            "ui"
+        ],
+        "ms-python.vscode-pylance": [
+            "ui"
+        ],
+        "ms-python.python": [
+            "ui"
+        ],
+        "hbenl.vscode-test-explorer": [
+            "ui"
+        ],
+        "ms-vscode.test-adapter-converter": [
+            "ui"
+        ],
+        "Gruntfuggly.todo-tree": [
+            "ui"
+        ],
+        "funkyremi.vscode-google-translate": [
+            "ui"
+        ],
+        "redhat.vscode-xml": [
+            "ui"
+        ],
+    }
 }
