@@ -35,7 +35,18 @@ RUN pip3 install --no-cache -r requirements.txt && \
 RUN apt update && apt install -y git && \
     apt install iputils-ping -y && \
     apt install htop -y && \
-    apt install mc -y
+    apt install mc -y && \
+    apt install -y zsh
+
+RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
+    && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
+    && chsh -s /bin/zsh
+
+ENV TERM xterm
+ENV ZSH_THEME agnoster
+RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+
+
 
 RUN git config --global user.email "spirit412@gmail.com" && \
     git config --global user.name "Aleksandr Domanskiy"

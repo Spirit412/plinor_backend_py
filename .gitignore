@@ -2,8 +2,6 @@
 .fleet
 .vs
 venv
-/venv
-api/venv
 .env
 */__pycache__
 .vs
@@ -26,7 +24,6 @@ logs/*
 .fleet
 .ipynb
 *.ipynb
-env
 .coverage
 prod.env
 main.env
