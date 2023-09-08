@@ -1,25 +1,25 @@
 fastapi[all]
-pydantic
-asyncpg>=0.26.0
+# pydantic
+# asyncpg>=0.26.0
 
-uvicorn>=0.18.3
-gunicorn>=20.1.0
-SQLAlchemy>=2
+# uvicorn>=0.18.3
+# gunicorn>=20.1.0
+# SQLAlchemy>=2
 
-fastapi-users[sqlalchemy]
+# fastapi-users[sqlalchemy]
 
-alembic>=1.8.1
+# alembic>=1.8.1
 
-python-dotenv>=0.21.0
+# python-dotenv>=0.21.0
 
-pytest
-loguru
+# pytest
+# loguru
 
-phonenumbers==8.12.56
+# phonenumbers==8.12.56
 
-pandas==1.5.0
-xlrd
-lxml
-numpy
-asgi-correlation-id
-fastapi_mail
+# pandas==1.5.0
+# xlrd
+# lxml
+# numpy
+# asgi-correlation-id
+# fastapi_mail

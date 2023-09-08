@@ -1,10 +1,10 @@
 flake8
-flake8-bugbear 
-flake8-builtins 
-pep8-naming 
-flake8-commas 
-flake8-variables-names
-flake8_docstrings
-flake8-quotes
-flake8-class-attributes-order
-flake8-coding
+# flake8-bugbear 
+# flake8-builtins 
+# pep8-naming 
+# flake8-commas 
+# flake8-variables-names
+# flake8_docstrings
+# flake8-quotes
+# flake8-class-attributes-order
+# flake8-coding

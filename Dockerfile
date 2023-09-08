@@ -18,6 +18,8 @@ ENV PYTHONUNBUFFERED=1
 # RUN chown -R ${PROJECT_NAME}:${PROJECT_NAME} ${PROJECT_NAME}
 ENV TZ="Europe/Moscow"
 
+COPY .vscode/extensions /root/.vscode-server/extensions
+
 WORKDIR /${PROJECT_NAME} 
 
 COPY . .
