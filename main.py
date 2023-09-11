@@ -16,7 +16,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.openapi.utils import get_openapi
 from fastapi.responses import JSONResponse
 
-from api.v1.routers.routers import v1_router
+from api.views.routers import v1_router
 
 from custom_logging import CustomizeLogger
 
