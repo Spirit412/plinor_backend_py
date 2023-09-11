@@ -1,5 +1,8 @@
 {
     "recommendations": [
+        "aaron-bond.better-comments@3.0.2",
+
+
         "yzhang.markdown-all-in-one",
         "wholroyd.jinja",
         "VisualStudioExptTeam.vscodeintellicode",
@@ -40,7 +43,6 @@
         "DotJoshJohnson.xml",
         "donjayamanne.python-environment-manager",
         "adpyke.vscode-sql-formatter",
-        "aaron-bond.better-comments",
         "ms-vscode-remote.remote-containers",
         "GitHub.remotehub",
     ],
