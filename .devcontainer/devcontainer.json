@@ -1,0 +1,65 @@
+{
+    // IF CONNECT TO IMAGE
+    "name": "devc_plinor_backend_py",
+    "image": "plinor_backend_py-api_py:latest",
+    // IF pre run docker-compose
+    // "dockerComposeFile": "../docker-compose.yaml",
+    // "service": "api_py",
+
+    "overrideCommand": true,
+    "workspaceMount": "source=${localWorkspaceFolder},target=/${PROJECT_NAME},type=bind,consistency=delegated",
+
+    // The optional 'workspaceFolder' property is the path VS Code should open by default when
+    // connected. This is typically a file mount in .devcontainer/docker-compose.yml
+    "workspaceFolder": "/${localWorkspaceFolderBasename}",
+    
+    "extensions": [
+        "aaron-bond.better-comments@3.0.2",
+        "esbenp.prettier-vscode@10.1.0",
+        "formulahendry.code-runner@0.12.0",
+        "Gruntfuggly.todo-tree@0.0.226",
+        "hbenl.vscode-test-explorer@2.21.1",
+        "ms-python.autopep8@2023.7.12271005",
+        "ms-python.flake8@2023.7.12161007",
+        "ms-python.isort@2023.11.12061012",
+        "ms-python.pylint@2023.7.12211006",
+        "ms-python.python@2023.14.0",
+        "ms-python.vscode-pylance@2023.8.50",
+        "ms-vscode.test-adapter-converter@0.1.8",
+        "njpwerner.autodocstring@0.6.1",
+        "yzhang.markdown-all-in-one@3.5.1",
+        "mtxr.sqltools@0.28.0",
+        "mtxr.sqltools-driver-mysql@0.6.0"
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3.11",
+        "terminal.integrated.defaultProfile.linux": "/bin/bash",
+        "terminal.integrated.cwd": "/plinor_backend_py",
+        "python.linting.enabled": true,
+        "sql-formatter.uppercase": true,
+        "python.linting.flake8Enabled": true
+    },
+    "forwardPorts": [
+        3000,
+        5000,
+        5432
+    ],
+    "postCreateCommand": "bash postCreateCommand.sh",
+    "dev.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "mutantdino.resourcemonitor"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "installDirectlyFromGitHubRelease": true,
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/rust:1": {
+            "version": "latest",
+            "profile": "default"
+        }
+    }
+}
