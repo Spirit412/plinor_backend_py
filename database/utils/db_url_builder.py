@@ -8,12 +8,12 @@ Examples of such URLs:
 
 Application examples:
     env_mapping = {
-        DbUrlParams.PROTOCOL: "B2MARKET_DB_PROTOCOL",
-        DbUrlParams.USER: "B2MARKET_DB_USER",
-        DbUrlParams.PASSWORD: "B2MARKET_DB_PASSWORD",
-        DbUrlParams.HOST: "B2MARKET_DB_HOST",
-        DbUrlParams.PORT: "B2MARKET_DB_PORT",
-        DbUrlParams.DBNAME: "B2MARKET_DB_DBNAME",
+        DbUrlParams.PROTOCOL: "DB_PROTOCOL",
+        DbUrlParams.USER: "DB_USER",
+        DbUrlParams.PASSWORD: "DB_PASSWORD",
+        DbUrlParams.HOST: "DB_HOST",
+        DbUrlParams.PORT: "DB_PORT",
+        DbUrlParams.DBNAME: "DB_DBNAME",
     }
 
     DbUriBuilderLocal = DbUrlEnvBuilder.get_local_type(env_mapping)

@@ -36,13 +36,13 @@ if settings.APP_DEBUG:
     db_logger.addHandler(db_handler)
 
 ENV_MAPPING = {
-    DbUrlParams.PROTOCOL: "B2MARKET_DB_PROTOCOL",
-    DbUrlParams.DRIVER: "B2MARKET_DB_DRIVER",
-    DbUrlParams.USER: "B2MARKET_DB_USER",
-    DbUrlParams.PASSWORD: "B2MARKET_DB_PASSWORD",
-    DbUrlParams.HOST: "B2MARKET_DB_HOST",
-    DbUrlParams.PORT: "B2MARKET_DB_PORT",
-    DbUrlParams.DBNAME: "B2MARKET_DB_DBNAME",
+    DbUrlParams.PROTOCOL: "DB_PROTOCOL",
+    DbUrlParams.DRIVER: "DB_DRIVER",
+    DbUrlParams.USER: "DB_USER",
+    DbUrlParams.PASSWORD: "DB_PASSWORD",
+    DbUrlParams.HOST: "DB_HOST",
+    DbUrlParams.PORT: "DB_PORT",
+    DbUrlParams.DBNAME: "DB_DBNAME",
 }
 DbUriBuilderLocal = DbUrlEnvBuilder.get_local_type(ENV_MAPPING)
 
@@ -59,9 +59,9 @@ class AsyncSessionManager:
         return cls.instance
 
     def refresh(self):
-        os.environ["B2MARKET_DB_DRIVER"] = "asyncpg"
+        os.environ["DB_DRIVER"] = "asyncpg"
         sql_db_url = DbUriBuilderLocal().from_env().to_str()
-        # Принудительно подключаем драйвер asyncpg независимо от B2MARKET_DB_DRIVER
+        # Принудительно подключаем драйвер asyncpg независимо от DB_DRIVER
         # sql_db_url = DbUriBuilderLocal().from_env().driver("asyncpg")
         self.async_engine = create_async_engine(sql_db_url, echo=settings.APP_DEBUG)
 
