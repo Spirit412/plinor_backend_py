@@ -1,20 +1,15 @@
 from __future__ import annotations
 
-import contextlib
 from asyncio.log import logger
-from fastapi import Depends, HTTPException
+from fastapi import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 
-from api.database.async_session import AsyncSessionManager
-from api.utils import timeit
+from database.async_session import AsyncSessionManager
 
 
 async def get_async_session_stub():
     raise NotImplementedError  # это реально тело этой функции
-
-# Dependency
-# @contextlib.asynccontextmanager
 
 
 async def get_async_session() -> AsyncSession:
@@ -32,12 +27,6 @@ async def get_async_session() -> AsyncSession:
             await session.close()
 
 
-class TX(AsyncSession):
-    def __new__(cls, db: AsyncSession = Depends(get_async_session)):
-        return db
-
-
 Base: DeclarativeMeta = declarative_base()
 
-
-__all__ = ["Base", "get_async_session", "TX"]
+__all__ = ["Base", "get_async_session"]

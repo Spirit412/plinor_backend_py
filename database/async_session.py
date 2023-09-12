@@ -11,7 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.orm import sessionmaker
-from api.config import settings
+from config import settings
 
 from .utils.db_url_builder import DbUrlEnvBuilder, DbUrlParams
 
@@ -79,12 +79,4 @@ class AsyncSessionManager:
         return self.async_engine
 
 
-# SessionForCelery - Для Celery. Если использовать SessionManager().alchemy_engine в целери таск не проходит, ругается на ошибку
-# sessionmaker нет query
-AsyncSessionForCelery = sessionmaker(autocommit=False,
-                                     autoflush=False,
-                                     bind=AsyncSessionManager().alchemy_engine,
-                                     expire_on_commit=False,
-                                     )
-
-__all__ = ["AsyncSessionManager", "DbUriBuilderLocal", "AsyncSessionForCelery"]
+__all__ = ["AsyncSessionManager", "DbUriBuilderLocal"]
