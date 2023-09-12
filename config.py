@@ -25,7 +25,7 @@ class Settings(BaseSettings):
 
     DB_HOST: str | None = Field(None)
     DB_PROTOCOL: str | None = Field("postgresql")
-    DB_DRIVER: str | None = Field(None)
+    DB_DRIVER: str | None = Field("asyncpg")
     DB_DBNAME: str | None = Field(None)
     DB_PORT: str | None = Field(None)
     DB_USER: str | None = Field(None)
