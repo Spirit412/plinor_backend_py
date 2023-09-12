@@ -1,5 +1,6 @@
 fastapi[all]
 pydantic
+pydantic-settings
 asyncpg>=0.26.0
 
 uvicorn>=0.18.3
