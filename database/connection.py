@@ -3,16 +3,18 @@ from __future__ import annotations
 from asyncio.log import logger
 from fastapi import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
+from sqlalchemy.orm.decl_api import DeclarativeMeta
+from sqlalchemy.ext.declarative import declarative_base
+from database.session import AsyncSessionManager
+from sqlalchemy.ext.asyncio import AsyncAttrs
+from sqlalchemy.orm import registry
 
-from database.async_session import AsyncSessionManager
 
-
-async def get_async_session_stub():
+async def get_session_stub():
     raise NotImplementedError  # это реально тело этой функции
 
 
-async def get_async_session() -> AsyncSession:
+async def get_session() -> AsyncSession:
     SessionLocal: AsyncSession = AsyncSessionManager().AsyncSessionLocal
     async with SessionLocal() as session:
         try:
@@ -27,6 +29,10 @@ async def get_async_session() -> AsyncSession:
             await session.close()
 
 
-Base: DeclarativeMeta = declarative_base()
 
-__all__ = ["Base", "get_async_session"]
+mapper_registry = registry()
+
+Base = mapper_registry.generate_base()
+
+
+__all__ = ["Base", "get_session", "get_session_stub"]

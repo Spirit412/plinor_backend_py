@@ -1,9 +1,8 @@
 from __future__ import annotations
+
 from typing import Optional
-from database.sqlalchemy_async_connection import Base
+from database.connection import Base
 from datetime import datetime
-from sqlalchemy import DateTime
-from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy import func
@@ -14,9 +13,6 @@ timestamp = Annotated[
     mapped_column(nullable=False, server_default=func.CURRENT_TIMESTAMP()),
 ]
 intpk = Annotated[int, mapped_column(primary_key=True)]
-
-class Base(DeclarativeBase):
-    pass
 
 
 class BaseModel(Base):
